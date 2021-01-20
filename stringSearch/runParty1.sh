@@ -1,1 +1,1 @@
-~/MPC-Benchmark/SemiHonestYao/SemiHonestYao -partyID 0 -configFile YaoConfig.txt -partiesFile Parties -internalIterationsNumber 1
+~/MPC-Benchmark/SemiHonestYao/SemiHonestYao -partyID 1 -configFile YaoConfig.txt -partiesFile Parties -internalIterationsNumber 1
