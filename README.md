@@ -21,7 +21,7 @@ In order to install this repository you will need to install the building blocks
 
 1. libscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
 2. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
-3. CBMC-GC: read [INSTALcbmcgc.md](INSTALcbmcgc.md)
+3. CBMC-GC: read [INSTALLcbmcgc.md](INSTALLcbmcgc.md)
 
 ## Usage
 
