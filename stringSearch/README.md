@@ -1,6 +1,6 @@
 Here we will explain how to integrate the already installed tools (libscapi, mpc-benchmark and cbmc-gc) in order to execute a secure computation of the string search functionality. This functionality is briefly explained in [stringSearchFunctionality.pdf](stringSearchFunctionality.pdf) along with some examples. A video tutorial on this use-case is given below:
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
+[![](http://img.youtube.com/vi/-AYUiQtT6fs/0.jpg)](http://www.youtube.com/watch?v=-AYUiQtT6fs "")
 
 The flow of the final program is described in the following picture:
 
