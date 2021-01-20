@@ -5,8 +5,8 @@ circuit_type = NoFixedKey
 # OS name is added automatically
 [AES-Linux]
 circuit_file = mainScapi.txt
-input_file_party_1 = Inputs1.txt
-input_file_party_2 = Inputs2.txt
+input_file_party_1 = Inputs0.txt
+input_file_party_2 = Inputs1.txt
 
 [SHA1-Linux]
 circuit_file = ../../samples/assets/circuits/SHA1/NigelSHA1.txt
