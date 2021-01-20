@@ -54,5 +54,5 @@ $ make
 
 #### Some remarks:
 
-- We are downloading a forked repo form the [original cryptobiu](https://github.com/cryptobiu/libscapi) because this fork has integrated the HQOT protocol along with OTExtension. For more info please check manel1874/libscapi README.md file in qdev branch.
+- We are downloading a forked repo form the [original cryptobiu](https://github.com/cryptobiu/libscapi) because this fork has integrated the HQOT protocol along with OTExtension. For more info please check [manel1874/libscapi README.md file](https://github.com/manel1874/libscapi/tree/qdev) in qdev branch.
 
