@@ -25,7 +25,7 @@ In order to install this repository you will need to install the building blocks
 
 ## Usage
 
-Currently, there are (only) two functionalities impleted: 
+Currently, there are (only) two functionalities implemented: 
 
 1. String search problem; 
 2. UPGMA algorithm to compute Phylogenetic Trees, developed under the [QuantumMining project](http://quantummining.av.it.pt/).
