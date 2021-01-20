@@ -52,7 +52,7 @@ Make sure you have installed cmake version 3.16. In order to do so please [go he
 $ make
 ```
 
-####Some notes:
+#### Some notes:
 
 - We are downloading a forked repo form the [original cryptobiu](https://github.com/cryptobiu/libscapi) because this fork has integrated the HQOT protocol along with OTExtension. For more info please check manel1874/libscapi README.md file in qdev branch.
 
