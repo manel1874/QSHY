@@ -1,4 +1,4 @@
-Here we will explain how to integrate the already installed tools (libscapi, mpc-benchmark and cbmc-gc) in order to execute a secure computation of the string search functionality. This functionality is briefly explained in [stringSearchFunctionality.pdf](stringSearchFunctionality.pdf) along with some examples. A video tutorial on this use-case is given below:
+Here we will explain how to integrate the already installed tools (libscapi, mpc-benchmark and cbmc-gc) in order to execute a secure computation of the string search functionality. This functionality is briefly explained in [SSfunctionality.png](SSfunctionality.png) along with some examples. A video tutorial on this use-case is given below:
 
 [![](http://img.youtube.com/vi/-AYUiQtT6fs/0.jpg)](http://www.youtube.com/watch?v=-AYUiQtT6fs "")
 
@@ -15,7 +15,7 @@ The flow of the final program is described in the following picture:
 $ ./generateCirc.sh
 ```
 
-### generateCirci.sh file
+### generateCirc.sh file
 
 Let us break down the file `generateCirci.sh` used to generate the Boolean Circuit description of `main.c` functionality:
 
@@ -33,15 +33,27 @@ $ cp mainBristol.txt ~/libscapi/tools/circuits/scapiBristolConverter
 $ ~/libscapi/tools/circuits/scapiBristolConverter/scapiBristolConverter bristol\_to\_scapi mainBristol.txt mainScapi.txt 2 true
 ```
 
-*Important note*: the converter scapiBristolConverter was manually altered because the output was not tailored to be used with Semi-Honest Yao protocol (only in manel1874 github repo).
+*Important note*: the converter scapiBristolConverter was manually altered because the output was not tailored to be used with Semi-Honest Yao protocol (only in manel1874/libscapi github repo).
 
 
 ## MPC-Benchmark Semi-honest Yao
 
+We will use the executable `./MPC-Benchmark/SemiHonestYao/SemiHonestYao` along with the boolean circuit to implement the String Search functionality assisted with Quantum Oblivious Keys. For that, we need to provide the following elements:
 
+1. Input file (e.g. `Inputsi.txt`): each party *i* must have its own input file with the same number of input bits as the boolean circuit.
 
+2. Communication file (e.g. `Parties`): file with the IP/port specification
 
+3. Configuration file (e.g. `YaoConfig.txt`): configuration file that tells the program the name/directory of the input files and the boolean circuit file.
 
+## Execution:
+
+Run the Yao Protocol for party *i* with the following command:
+```
+$ ~/MPC-Benchmark/SemiHonestYao/SemiHonestYao -partyID i -configFile YaoConfig.txt -partiesFile Parties -internalInterationsNumber 1
+```
+
+The other party 1-*i* should be run in a different terminal or in a different computar. We can also use the files `runParty0.sh` or `runParty1.sh` for shortcut.
 
 
 
