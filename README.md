@@ -20,7 +20,7 @@ QSHY runs on Linux (x64 only, 32 bit systems are not supported) and has been tes
 In order to install this repository you will need to install the building blocks mentioned before. Install in the following order:
 
 1. libscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
-2. MPC-Benchmark: read [INSTALLmpcbenchamrk.md](INSTALLmpcbenchamrk.md)
+2. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
 3. CBMC-GC: read [INSTALcbmcgc.md](INSTALcbmcgc.md)
 
 ## Usage

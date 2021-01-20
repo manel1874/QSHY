@@ -19,7 +19,7 @@ Rename miracl.a to libmiracl.a and copy to /usr/local/lib:
 sudo cp ./libmiracl.a /usr/local/lib
 ```
 	
-### MPC-Benchamr
+### MPC-Benchmark
 
 Download MPC-Benchmark to the Home directory:
 ```
