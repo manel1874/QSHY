@@ -2,6 +2,8 @@ Here we will explain how to integrate the already installed tools (libscapi, mpc
 
 [![](http://img.youtube.com/vi/-AYUiQtT6fs/0.jpg)](http://www.youtube.com/watch?v=-AYUiQtT6fs "")
 
+**Note:** In the tutorial above we are not using the OT protocol based on Oblivious Keys generated with quantum technologies (HQOT protocol).
+
 The flow of the final program is described in the following picture:
 
 ![workFlow](workFlow.png)
@@ -46,6 +48,18 @@ We will use the executable `./MPC-Benchmark/SemiHonestYao/SemiHonestYao` along w
 
 3. Configuration file (e.g. `YaoConfig.txt`): configuration file that tells the program the name/directory of the input files and the boolean circuit file.
 
+## Oblivious Keys
+
+The generation of Oblivious Keys is independent from the SMC execution and it can be generated a priori between the interested parties. 
+
+#### Location of the Oblivious Keys
+
+These should be saved in [quantum_oblivious_key_distribution/signals](quantum_oblivious_key_distribution/signals) with .sgn extension. 
+
+#### Generation of Oblivious Keys
+
+The deployed system uses Oblivious Keys generated with quantum technologies. For more information please read the following [paper](https://www.mdpi.com/2076-3417/10/12/4080). However, for testing purposes, we provide a Quantum Oblivious Key Distribution emulator along with already generated Oblivious Keys between two parties (Alice and Bob).
+
 ## Execution:
 
 Run the Yao Protocol for party *i* with the following command:
@@ -53,7 +67,7 @@ Run the Yao Protocol for party *i* with the following command:
 $ ~/MPC-Benchmark/SemiHonestYao/SemiHonestYao -partyID i -configFile YaoConfig.txt -partiesFile Parties -internalInterationsNumber 1
 ```
 
-The other party 1-*i* should be run in a different terminal or in a different computar. We can also use the files `runParty0.sh` or `runParty1.sh` for shortcut.
+The other party 1-*i* should be run in a different terminal or in a different computer. We can also use the files `runParty0.sh` or `runParty1.sh` for shortcut.
 
 
 

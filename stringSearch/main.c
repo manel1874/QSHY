@@ -1,5 +1,5 @@
-#define LEN_A 64
-#define LEN_B 64
+#define LEN_A 32
+#define LEN_B 32
 #define LEN_P 1768
 #define DIST 10
 
