@@ -1,4 +1,4 @@
-In [stringSearch](stringSearch/README.md) we explain the integration of the four building blocks of QSHY (libscapi, mpc-benchmark, cbmc-gc and HQOT). Here we present the main functionality used in the [UPGMA](../UPGMA) algorithm for DNA sequences: [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance).
+In [stringSearch](stringSearch/README.md) we explain the integration of the four building blocks of QSHY (libscapi, mpc-benchmark, cbmc-gc and HQOT). Here we present very briefly the coding idea of the main functionality used in the [UPGMA](../UPGMA) algorithm for DNA sequences: [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance).
 
 
 ## ANSI-C code
@@ -52,9 +52,7 @@ So, bSeq1 xor bSeq2 = 00 01 00 11 and popcount(00 01 00 11) = 3.
 
 In order to solve this technical issue, we substitute the + (add) operation of line 12 by | (or) (see **code 2**). This way, all the encoded elements (00, 01, 10, 11) have the same distance between them.
 
-####
-
-#### Code 1
+#### Code 2
 
 ```
 1   const unsigned int m1  = 0x55555555; //binary: 0101...
