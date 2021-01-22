@@ -54,9 +54,13 @@ The project (and each party) is structured as follows:
 	- Each party computes the hamming distance between the several parties (First phase - private):
 		
 		(a) Sends and receives the number of inputs to/from the other parties;
+		
 		(b) Computes Hamming Distance using SMC between parties’ sequences;
+		
 		(c) Evaluators send SMC result to Garbler and Garlber receives it;
+		
 		(d) Computes interanlly the hamming distances between their own sequences;
+		
 		(e) Sends all the distances not known by the other parties.
 
 	- Create Hamming Distance Matrix. This matrix has the following structure:
