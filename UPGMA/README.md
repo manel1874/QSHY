@@ -22,7 +22,7 @@ The project is structured as follows (inside each party):
 
 	- `guide_ tree.hpp`: header file of the second phase of UPGMA;
 	- `HamParties.hpp`: header file of the first (private) phase of UPGMA. 
-	– `matrixDist.hpp`: header file to build the matrix distance.
+	- `matrixDist.hpp`: header file to build the matrix distance.
 
 3. `inputFiles`: Input files with the following name structure `Party_ i_ seq_ j.txt` for party number i ≤ 3 and sequence j. Note that the strucutre of the input elements in this file should be as explained in [hammingDistance](../hammingDistance) section.
 
@@ -34,14 +34,14 @@ The project is structured as follows (inside each party):
 
 7. `results`: empty folder where the Hamming distances between sequences are saved. There are two name structures:
 
-	– `out_ myseq_ i_ otherparty_ j_ otherseq_ k.txt`: where i denotes the current party’s sequence number, j denotes the other party id and k the other party’s sequence number. All the Hamming Distances between the current party and other parties have this structure (computed during QSMC phase and internal phase).
-	– `out_ party_ l_ seq_ i_ otherparty_ j_ otherseq_ k.txt`: which saves the Hamming distance between party l ith sequence and party j kth sequence. This structure is used to save the hamming distances that are not related with the current party’s sequences (distributed during the QKD phase).
+	- `out_ myseq_ i_ otherparty_ j_ otherseq_ k.txt`: where i denotes the current party’s sequence number, j denotes the other party id and k the other party’s sequence number. All the Hamming Distances between the current party and other parties have this structure (computed during QSMC phase and internal phase).
+	- `out_ party_ l_ seq_ i_ otherparty_ j_ otherseq_ k.txt`: which saves the Hamming distance between party l ith sequence and party j kth sequence. This structure is used to save the hamming distances that are not related with the current party’s sequences (distributed during the QKD phase).
 
 8. `src`:
 	
-	– `guide_ tree.cpp`: source file of the second phase of UPGAM.
-	– `HamParties.cpp`: source file of the first (private) phase of UPGAM.
-	– `matrixDist.cpp`: source file to build the matrix distance from the computed hamming distances.
+	- `guide_ tree.cpp`: source file of the second phase of UPGAM.
+	- `HamParties.cpp`: source file of the first (private) phase of UPGAM.
+	- `matrixDist.cpp`: source file to build the matrix distance from the computed hamming distances.
 
 9. `yaoConfigFiles`: before the application is run the folder is empty. After it is run it is created one configFile for each input sequence. These files contain the information of the paths to the boolean circuit and input elements.
 
