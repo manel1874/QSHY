@@ -28,7 +28,7 @@ The project (and each party) is structured as follows:
 
 4. `partiesFiles`: one file with the ip numbers and ports of all the three parties. After the application is run it is created one file for each pair of parties. File name structure created: `Parties_i_j`, where i and j are the parties’ ids.
 
-5. `phylogeneticTree`: empty folder where the final phylogenetic tree is saved with .nwk extension.
+5. `phylogeneticTree`: empty folder where the final phylogenetic tree is saved with `.nwk` extension.
 
 6. `quantum_oblivious_key_distribution`: emulator to generate oblivious keys to be used with the oblivious transfer functionality.
 
@@ -77,6 +77,26 @@ $ ./runUPGMA 0 2
 It runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
 
 5. `webapp.py`: Flask web application.
+
+
+## Execution
+
+### Building process
+
+After installing [libscapi](../INSTALLlibscapi.md) and [mpc-benchmark](../INSTALLmpcbenchmark.md), we simply have to run inside the party folder:
+```
+$ make
+```
+
+Now, we can either run the application through the terminal or using `webapp.py` Flask application.
+
+### Terminal
+
+
+
+### Flask application
+
+Please make sure you have Flask python package installed in your machine. See [here](https://flask.palletsprojects.com/en/1.1.x/installation/) the docs to install Flask.
 
 
 
