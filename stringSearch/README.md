@@ -69,7 +69,7 @@ $ ~/MPC-Benchmark/SemiHonestYao/SemiHonestYao -partyID i -configFile YaoConfig.t
 
 The other party 1-*i* should be run in a different terminal or in a different computer. We can also use the files `runParty0.sh` or `runParty1.sh` for shortcut.
 
-
+An output file called `output_file.txt` is generated with the solution of the private computation.
 
 
 
