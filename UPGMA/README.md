@@ -38,6 +38,7 @@ The project is structured as follows (inside each party):
 	– `out_ party_ l_ seq_ i_ otherparty_ j_ otherseq_ k.txt`: which saves the Hamming distance between party l ith sequence and party j kth sequence. This structure is used to save the hamming distances that are not related with the current party’s sequences (distributed during the QKD phase).
 
 8. `src`:
+	
 	– `guide_ tree.cpp`: source file of the second phase of UPGAM.
 	– `HamParties.cpp`: source file of the first (private) phase of UPGAM.
 	– `matrixDist.cpp`: source file to build the matrix distance from the computed hamming distances.
