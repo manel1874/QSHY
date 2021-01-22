@@ -71,8 +71,6 @@ where ij denotes the sequence j owned by party i. Inside each cell have the hamm
 	- Internally compute the second phase of UPGMA algorithm.
 
 
-
-
 2. `runSMCParty.sh`: shell script used inside [`HamParties.cpp`](src/HamParties.cpp) file in order to run the Hammind Distance SMC protocol between two parties.
 
 3. `makefile`: file used to compile the project.
