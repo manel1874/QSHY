@@ -108,10 +108,12 @@ party_2_port = 8400
 
 3. Run in separate terminals the application `./runUPGMA` providing the party id and the number of input sequences: 
 ```
-$ ./runUPGMA 0 2 (in Alice)
-$ ./runUPGMA 1 3 (for Bob)
-$ ./runUPGMA 2 1 (for Charlie)
+$ ./runUPGMA 0 2 
+$ ./runUPGMA 1 3 
+$ ./runUPGMA 2 1
 ```
+
+In the presented example Alice has id 0, Bob id 1 and Charlie has id 2.
 
 4. The output result is saved inside phylogeneticTree folder. In order to better visualize the tree you can go to [this website](http://etetoolkit.org/treeview/).
 
