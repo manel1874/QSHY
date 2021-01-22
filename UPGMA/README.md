@@ -92,6 +92,28 @@ Now, we can either run the application through the terminal or using `webapp.py`
 
 ### Terminal
 
+1. Ensure the file `partiesFiles/Parties` have the following structure:
+```
+party_0_ip = 127.0.0.1
+party_1_ip = 127.0.0.1
+party_2_ip = 127.0.0.1
+party_0_port = 8000
+party_1_port = 8200
+party_2_port = 8400
+```
+
+*Non-local run:* provide the corresponding IP addresses of the parties.
+
+2. Place the desired sequences inside the folder `inputFiles` with the name structure described above.
+
+3. Run in separate terminals the application `./runUPGMA` providing the party id and the number of input sequences: 
+```
+$ ./runUPGMA 0 2 (in Alice)
+$ ./runUPGMA 1 3 (for Bob)
+$ ./runUPGMA 2 1 (for Charlie)
+```
+
+4. The output result is saved inside phylogeneticTree folder. In order to better visualize the tree you can go to [this website](http://etetoolkit.org/treeview/).
 
 
 ### Flask application
@@ -99,9 +121,18 @@ Now, we can either run the application through the terminal or using `webapp.py`
 Please make sure you have Flask python package installed in your machine. See [here](https://flask.palletsprojects.com/en/1.1.x/installation/) the docs to install Flask.
 
 
+1. Launch Flask application:
+```
+$ python webapp.py
+```
 
+2. Open web browser with `http://127.0.0.1:5000`.
 
+![introQSMC](introQSMC.png)
 
+3. Go to *Run privPhyloTree* tab and type the Party Id value and sequences number.
+
+![runQSMC](runQSMC.png)
 
 
 
