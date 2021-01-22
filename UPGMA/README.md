@@ -59,8 +59,7 @@ The project (and each party) is structured as follows:
 		- Computes interanlly the hamming distances between their own sequences;
 		- Sends all the distances not known by the other parties.
 
-	- Create Hamming Distance Matrix. This matrix has the following structure:
-
+	- Create Hamming Distance Matrix. This matrix has the following structure for the scenario where Alice has three sequences, Bob has two and Charlie one sequence:
 ![hamDistMatrix](hamDistMatrix.png)
 where ij denotes the sequence j owned by party i. Inside each cell have the hamming distance between the corresponding column and row sequences.
 	
