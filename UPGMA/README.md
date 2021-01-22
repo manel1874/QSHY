@@ -53,7 +53,7 @@ The project (and each party) is structured as follows:
 
 	- Each party computes the hamming distance between the several parties (First phase - private):
 		
-		(a) Sends and receives the number of inputs to/from the other parties;
+		- Sends and receives the number of inputs to/from the other parties;
 		
 		(b) Computes Hamming Distance using SMC between parties’ sequences;
 		
