@@ -10,7 +10,7 @@ The system implemented is based on the paper [*Quantum Secure Multiparty Computa
 
 ## Project structure
 
-The project is structured as follows (inside each party):
+The project (and each party) is structured as follows:
 
 #### Directories
 
@@ -20,7 +20,7 @@ The project is structured as follows (inside each party):
 
 2. `include`:
 
-	- `guide_ tree.hpp`: header file of the second phase of UPGMA;
+	- `guide_tree.hpp`: header file of the second phase of UPGMA;
 	- `HamParties.hpp`: header file of the first (private) phase of UPGMA. 
 	- `matrixDist.hpp`: header file to build the matrix distance.
 
@@ -34,12 +34,12 @@ The project is structured as follows (inside each party):
 
 7. `results`: empty folder where the Hamming distances between sequences are saved. There are two name structures:
 
-	- `out_ myseq_ i_ otherparty_ j_ otherseq_ k.txt`: where i denotes the current party’s sequence number, j denotes the other party id and k the other party’s sequence number. All the Hamming Distances between the current party and other parties have this structure (computed during QSMC phase and internal phase).
-	- `out_ party_ l_ seq_ i_ otherparty_ j_ otherseq_ k.txt`: which saves the Hamming distance between party l ith sequence and party j kth sequence. This structure is used to save the hamming distances that are not related with the current party’s sequences (distributed during the QKD phase).
+	- `out_myseq_i_otherparty_j_otherseq_k.txt`: where i denotes the current party’s sequence number, j denotes the other party id and k the other party’s sequence number. All the Hamming Distances between the current party and other parties have this structure (computed during QSMC phase and internal phase).
+	- `out_party_l_seq_i_otherparty_j_otherseq_k.txt`: which saves the Hamming distance between party l ith sequence and party j kth sequence. This structure is used to save the hamming distances that are not related with the current party’s sequences (distributed during the QKD phase).
 
 8. `src`:
 	
-	- `guide_ tree.cpp`: source file of the second phase of UPGAM.
+	- `guide_tree.cpp`: source file of the second phase of UPGAM.
 	- `HamParties.cpp`: source file of the first (private) phase of UPGAM.
 	- `matrixDist.cpp`: source file to build the matrix distance from the computed hamming distances.
 
@@ -48,6 +48,43 @@ The project is structured as follows (inside each party):
 10. `templates`: the tamplates used for the web application built in Flask.
 
 #### Application
+
+1. `App.cpp`: Application source file with main function. This main function is divided as follows:
+
+	- Each party computes the hamming distance between the several parties (First phase - private):
+		(a) Sends and receives the number of inputs to/from the other parties;
+		(b) Computes Hamming Distance using SMC between parties’ sequences;
+		(c) Evaluators send SMC result to Garbler and Garlber receives it;
+		(d) Computes interanlly the hamming distances between their own sequences;
+		(e) Sends all the distances not known by the other parties.
+	- Create Hamming Distance Matrix. This matrix has the following structure:
+
+![hamDistMatrix](hamDistMatrix.png)
+where ij denotes the sequence j owned by party i. Inside each cell have the hamming distance between the corresponding column and row sequences.
+	- Internally compute the second phase of UPGMA algorithm.
+
+
+
+
+2. `runSMCParty.sh`: shell script used inside [`HamParties.cpp`](src/HamParties.cpp) file in order to run the Hammind Distance SMC protocol between two parties.
+
+3. `makefile`: file used to compile the project.
+
+4. `runUPGMA`: execultable created after running `make` command. The executable needs two inputs: party id and number of inputs. *Example*:
+
+```
+$ ./runUPGMA 0 2
+```
+
+Runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
+
+5. `webapp.py`: Flask web application.
+
+
+
+
+
+
 
 
 
