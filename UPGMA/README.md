@@ -67,6 +67,7 @@ The project (and each party) is structured as follows:
 
 ![hamDistMatrix](hamDistMatrix.png)
 where ij denotes the sequence j owned by party i. Inside each cell have the hamming distance between the corresponding column and row sequences.
+	
 	- Internally compute the second phase of UPGMA algorithm.
 
 
