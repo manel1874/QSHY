@@ -71,12 +71,10 @@ where ij denotes the sequence j owned by party i. Inside each cell have the hamm
 3. `makefile`: file used to compile the project.
 
 4. `runUPGMA`: execultable created after running `make` command. The executable needs two inputs: party id and number of inputs. *Example*:
-
 ```
 $ ./runUPGMA 0 2
 ```
-
-Runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
+It runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
 
 5. `webapp.py`: Flask web application.
 
