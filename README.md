@@ -29,6 +29,6 @@ Currently, there are (only) three functionalities implemented:
 
 1. String search problem;
 2. Hamming distance;
-3. UPGMA algorithm to compute Phylogenetic Trees, developed under the [QuantumMining project](http://quantummining.av.it.pt/).
+3. UPGMA algorithm to compute Phylogenetic Trees, developed under the [QuantumMining](http://quantummining.av.it.pt/) and [QuGENOME](http://qugenome.av.it.pt/) projects.
 
 Start from reading the String search problem implementation in the corresponding [readme](stringSearch/README.md) file. It explains the integration of the above four building blocks. Then, look into [hamming distance](hammingDistance/README.md) in order to understand the basic funcionality used extensively in the UPGMA algorithm.
