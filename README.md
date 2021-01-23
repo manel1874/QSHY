@@ -5,7 +5,7 @@ QSHY stands for **Q**uantum **S**emi **H**onest **Y**ao and this repository impl
 * [libscapi](https://github.com/cryptobiu/libscapi): implements the basic cryptographic primitives and also the communication channels.
 * [MPC-Benchmark](https://github.com/cryptobiu/MPC-Benchmark): implements Yao protocol based on the libscapi library.
 * [CBMC-GC](https://gitlab.com/securityengineering/CBMC-GC-2.git): translates ANSI-C programs into boolean circuits.
-* HQOT: Hybrid Quantum Oblivious Transfer based on Quantum Oblivious Key Distribution presented in the paper: [*Generation and Distribution of Quantum Oblivious Keys for Secure Multiparty Computation*](https://www.mdpi.com/2076-3417/10/12/4080) 
+* HQOT: Hybrid Quantum Oblivious Transfer based on Quantum Oblivious Key Distribution presented in the paper: [*Generation and Distribution of Quantum Oblivious Keys for Secure Multiparty Computation*](https://www.mdpi.com/2076-3417/10/12/4080). In order to better understand the integration of HQOT protocol in both libscapi and MPC-Benchmark, please read this [README file](https://github.com/manel1874/libscapi/blob/qdev/lib/OTExtensionBristol/quantum_random_oblivious_transfer/README.md).
 
 The main goal of the repository is to offer a framework to develop Secure Multiparty Computation (SMC) protocols based on quantum technologies.
 
