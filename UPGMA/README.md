@@ -60,7 +60,7 @@ The project (and each party) is structured as follows:
 		- Sends all the distances not known by the other parties.
 
 	- Create Hamming Distance Matrix. This matrix has the following structure for the scenario where Alice has three sequences, Bob has two and Charlie one sequence:
-![hamDistMatrix](hamDistMatrix.png)
+![hamDistMatrix](img/hamDistMatrix.png)
 where ij denotes the sequence j owned by party i. Inside each cell have the hamming distance between the corresponding column and row sequences.
 	
 	- Internally compute the second phase of UPGMA algorithm.
@@ -130,12 +130,15 @@ $ python webapp.py
 
 2. Open web browser with `http://127.0.0.1:5000`.
 
-![introQSMC](introQSMC.png)
+![introQSMC](img/introQSMC.png)
 
 3. Go to *Run privPhyloTree* tab and type the Party Id value and sequences number.
 
-![runQSMC](runQSMC.png)
+![runQSMC](img/runQSMC.png)
 
+4. The solution is presented in newick format.
+
+![solQSMC](img/solQSMC.png)
 
 
 
