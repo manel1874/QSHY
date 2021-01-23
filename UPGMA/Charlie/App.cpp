@@ -7,8 +7,8 @@
 #include <climits>
 #include <cmath>
 
-#include "../../../../libscapi/include/comm/Comm.hpp"
-#include "../../../../libscapi/include/infra/ConfigFile.hpp"
+#include "../../../libscapi/include/comm/Comm.hpp"
+#include "../../../libscapi/include/infra/ConfigFile.hpp"
 
 #include "include/HamParties.hpp"
 #include "include/matrixDist.hpp"

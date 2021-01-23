@@ -1,97 +1,39 @@
-input1 = [0,3,3,1,2,0,2,2,3,3,3,0,3,0,1,1,3,3,1,1,1,0,2,2,3,0,0,1,
-	0,0,0,1,1,0,0,1,1,0,0,1,3,3,3,1,2,0,3,1,3,1,3,3,2,3,0,2,
-	0,3,1,3,2,3,3,1,3,1,3,0,0,0,1,2,0,0,1,3,3,3,0,0,0,0,3,1,
-	3,2,3,2,3,2,2,1,3,2,3,1,0,1,3,1,2,2,1,3,2,1,0,3,2,1,3,3,
-	0,2,3,2,1,0,1,3,1,0,1,2,1,0,2,3,0,3,0,0,3,3,0,0,3,0,0,1,
-	3,0,0,3,3,0,1,3,2,3,1,2,3,3,2,0,1,0,2,2,0,1,0,1,2,0,2,3,
-	0,0,1,3,1,2,3,1,3,0,3,1,3,3,1,3,2,1,0,2,2,1,3,2,1,3,3,0,
-	1,2,2,3,3,3,1,2,3,1,1,2,3,2,3,3,2,1,0,2,1,1,2,0,3,1,0,3,
-	1,0,2,1,0,1,0,3,1,3,0,2,2,3,3,3,1,2,3,1,1,2,2,2,3,2,3,2,
-	0,1,1,2,0,0,0,2,2,3,0,0,2,0,3,2,2,0,2,0,2,1,1,3,3,2,3,1,
-	1,1,3,2,2,3,3,3,1,0,0,1,2,0,2,0,0,0,0,1,0,1,0,1,2,3,1,1,
-	0,0,1,3,1,0,2,3,3,3,2,1,1,3,2,3,3,3,3,0,1,0,2,2,3,3,1,2,
-	1,2,0,1,2,3,2,1,3,1,2,3,0,1,2,3,2,2,1,3,3,3,2,2,0,2,0,1,
-	3,1,1,2,3,2,2,0,2,2,0,2,2,3,1,3,3,0,3,1,0,2,0,2,2,1,0,1,
-	2,3,1,0,0,1,0,3,1,3,3,0,0,0,2,0,3,2,2,1,0,1,3,3,2,3,2,2,
-	1,3,3,0,2,3,0,2,0,0,2,3,3,2,0,0,0,0,0,2,2,1,2,3,3,3,3,2,
-	1,1,3,1,0,0,1,3,3,2,0,0,1,0,2,1,1,1,3,0,3,2,3,2,3,3,1,0,
-	3,1,0,0,0,1,2,3,3,1,2,2,0,3,2,1,3,1,2,0,0,1,3,2,1,0,1,1,
-	3,1,0,3,2,2,3,1,0,3,2,3,3,0,3,2,2,3,3,2,0,2,1,3,2,2,3,0,
-	2,1,0,2,0,0,1,3,1,2,0,0,2,2,1,0,3,3,1,0,2,3,0,1,2,2,3,1,
-	2,3,0,2,3,2,2,3,2,0,2,0,1,0,1,3,3,2,2,3,2,3,1,1,3,3,2,3,
-	1,1,1,3,1,0,3,2,3,2,2,2,1,2,0,0,0,3,0,1,1,0,2,3,2,2,1,3,
-	3,0,1,1,2,1,0,0,2,2,3,3,1,3,3,1,3,3,1,2,3,0,0,2,0,0,1,2,
-	2,3,0,0,3,0,0,0,2,2,0,2,1,3,2,2,3,2,2,1,1,0,3,0,2,3,3,0,
-	1,2,2,1,2,1,1,2,0,3,1,3,0,0,0,2,3,1,0,3,3,3,2,0,1,3,3,0,
-	2,2,1,2,0,1,2,0,2,1,3,3,2,2,1,0,1,3,2,0,3,1,1,3,3,0,3,2,
-	0,0,2,0,3,3,3,3,1,0,0,2,0,0,0,0,1,3,2,2,0,0,1,0,1,3,0,0,
-	0,1,0,3,0,2,1,0,2,3,2,2,3,2,3,3,0,1,1,1,2,3,2,0,0,1,3,1,
-	0,3,2,1,2,3,2,0,2,1,3,3,0,0,1,2,2,0,2,2,2,2,1,0,3,0,1,0,
-	1,3,1,2,1,3,0,3,2,3,1,2,0,3,0,0,1,0,0,1,3,3,1,3,2,3,2,2,
-	1,1,1,3,2,0,3,2,2,1,3,0,1,1,1,3,1,3,3,2,0,2,3,2,1,0,3,3,
-	0,0,0,2,0,1,1,3,3,1,3,0,2,1,0,1,2,3,2,1,3,2,2,3,0,0,0,2,
-	1,3,3,1,0,3,2,1,0,1,3,3,3,2,3,1,1,2,0,0,1,0,0,1,3,2,2,0,
-	1,3,3,3,0,3,3,2,0,1,0,1,3,0,0,2,0,2,2,2,2,3,2,3,0,0,1,3,
-	2,1,3,2,1,1,2,3,2,0,0,1,0,3,2,0,2,1,0,3,2,0,0,0,3,3,2,1,
-	3,3,2,2,3,0,1,0,1,2,2,0,0,1,2,3,3,1,3,2]
+input1 = "ATGGTGAAAGTGAAAA"
 
 seq_number = "seq_0.txt"
 
 filename = 'Party_1_' + seq_number
 
-def print_zero(filename):
+def print_A(filename):
     with open(filename, 'a+') as file_object:
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
         file_object.write("0\n")
         file_object.write("0\n")
 
-def print_one(filename):
+def print_C(filename):
+    with open(filename, 'a+') as file_object:
+        file_object.write("0\n")
+        file_object.write("1\n")
+
+
+def print_G(filename):
     with open(filename, 'a+') as file_object:
         file_object.write("1\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
         file_object.write("0\n")
 
-def print_two(filename):
-    with open(filename, 'a+') as file_object:
-        file_object.write("0\n")
-        file_object.write("1\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-
-def print_three(filename):
+def print_T(filename):
     with open(filename, 'a+') as file_object:
         file_object.write("1\n")
         file_object.write("1\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
-        file_object.write("0\n")
 
 for elem in input1:
-    if elem == 0:
-        print_zero(filename)
-    elif elem == 1:
-        print_one(filename)
-    elif elem == 2:
-        print_two(filename)
-    elif elem == 3:
-        print_three(filename)
+    if elem == "A":
+        print_A(filename)
+    elif elem == "C":
+        print_C(filename)
+    elif elem == "G":
+        print_G(filename)
+    elif elem == "T":
+        print_T(filename)
 
 
 YaoConfig = """print_output = true
@@ -104,9 +46,9 @@ circuit_file = mainScapi.txt
 input_file_party_1 = Inputs/"""+filename+"""
 input_file_party_2 = Inputs/"""+filename
 
-file_object = open("../YaoConfig_" + seq_number, "w")
-file_object.write(YaoConfig)
+#file_object = open("../YaoConfig_" + seq_number, "w")
+#file_object.write(YaoConfig)
 
-file_object.close()
+#file_object.close()
 
 

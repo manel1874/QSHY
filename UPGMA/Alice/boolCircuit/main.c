@@ -1,4 +1,4 @@
-#define LEN_SEQ 2000
+#define LEN_SEQ 1
 
 typedef struct {
 	unsigned int el[LEN_SEQ];

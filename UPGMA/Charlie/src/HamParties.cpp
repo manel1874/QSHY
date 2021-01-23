@@ -278,7 +278,6 @@ void HamParty::runHamSMC()
                     cout <<"Finnished Yao protocol"<<endl;
 
                     // kill process 
-                    std::cout <<"kill $(lsof -t -i:"<< myPort << ")" <<endl;
                     std::string kill_process = "kill $(lsof -t -i:" + to_string(myPort) + ")";
                     std::system(kill_process.c_str());
                     std::string kill_process_obliv = "kill $(lsof -t -i:" + to_string(myPort+1) + ")";
@@ -775,17 +774,17 @@ string preprocessInput(string path)
     std::string line;    
     ifstream inputFile(path);
 
-    string A = "00000000";
-    string C = "10000000";
-    string G = "01000000";
-    string T = "11000000";
+    string A = "00";
+    string C = "01";
+    string G = "10";
+    string T = "11";
 
     while(std::getline(inputFile, line))
     {
         ++numOfDigits;
         element += line;
 
-        if(numOfDigits == 8)
+        if(numOfDigits == 2)
         {
             if(element == A)
                 sequence += "A";
