@@ -12,7 +12,7 @@ The flow of the final program is described in the following picture:
 
 1. Write an ANSI-C program with the desired functionality to be computed and save it as `main.c`. The input values of the functionality are identified by the following prefix: `INPUT_`. Please check the .pdf `cbmc-gc-v0.9.3\_upd1.pdf` in [forsye](https://forsyte.at/software/cbmc-gc/) webpage for more syntax specifications. Also, check the [cbmc-gc repo example section](https://gitlab.com/securityengineering/CBMC-GC-2/-/tree/master/examples) and [`cbmc-gc-v0.9.3.tar.gz`](https://forsyte.at/software/cbmc-gc/) for more examples.
 
-2. Run the the shell fil `generateCirc.sh`:
+2. Run the the shell file `generateCirc.sh`:
 ```
 $ ./generateCirc.sh
 ```
