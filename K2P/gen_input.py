@@ -5,7 +5,7 @@ sequence = ['00','01','10','11']
 
 input = []
 
-for i in range(0, 32000):
+for i in range(0, 16):
 	input = input + [random.choice(sequence)]
 
 #print(input)
