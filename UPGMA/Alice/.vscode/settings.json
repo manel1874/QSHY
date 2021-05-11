@@ -59,6 +59,10 @@
         "set": "cpp",
         "string": "cpp",
         "variant": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "codecvt": "cpp",
+        "csignal": "cpp",
+        "filesystem": "cpp",
+        "future": "cpp"
     }
 }

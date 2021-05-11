@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
 
+
     {
         "name": "(gdb) Launch",
         "type": "cppdbg",
         "request": "launch",
         "program": "${workspaceFolder}/runUPGMA",
-        "args": ["0", "2"],
+        "args": ["0", "8"],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],

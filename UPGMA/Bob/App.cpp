@@ -31,7 +31,6 @@ int main(int argc, char* argv[])
 
     shared_ptr<HamParty> meHamParty = make_shared<HamParty>(partyNum, numOfParties, numOfInputs);
 
-
     cout << "PART 1 - COMPUTE HAMMING DISTANCES BETWEEN SEQUENCES" << endl;
     cout << "PART 1.1 - SEND NUMBER OF INPUTS \n" << endl;
     // Send number of inputs to other parties
@@ -68,6 +67,12 @@ int main(int argc, char* argv[])
     ofstream output_upgma("phylogeneticTree/upgma_tree.nwk");
     upgma_tree.Output(output_upgma);
     output_upgma.close();
+
+    cout << "Clean up auxiliary informatin" << endl;
+
+    // Remove files from results folder, otherwise the next run will get stuck (unkown issue solved)
+    std::string del_script = "rm results/*";
+    std::system(del_script.c_str()); 
 
     cout << "DONE : Result saved to phylogeneticTree folder. \n";
 

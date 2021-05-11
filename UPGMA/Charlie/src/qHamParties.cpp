@@ -208,7 +208,7 @@ void HamParty::runHamSMC()
 
                     cout << "Computing hamming distance between myseq " + to_string(j) + " and otherseq " + to_string(k) << endl;
                     // Run SMC between evaluator and garbler=======
-                    std::string run_script = "./runSMCParty.sh ";
+                    std::string run_script = "./qrunSMCParty.sh ";
                     run_script += to_string(1);
                     run_script += " yaoConfigFiles/YaoConfig_seq_" + to_string(j) + ".txt ";
                     run_script += partiesFile_name;
@@ -268,7 +268,7 @@ void HamParty::runHamSMC()
                 {   
                     cout << "Computing hamming distance between myseq " + to_string(j) + " and otherseq " + to_string(k) << endl;
                     // Run SMC between evaluator and garbler=======
-                    std::string run_script = "./runSMCParty.sh ";
+                    std::string run_script = "./qrunSMCParty.sh ";
                     run_script += to_string(0);
                     run_script += " yaoConfigFiles/YaoConfig_seq_" + to_string(j) + ".txt ";
                     run_script += partiesFile_name;
@@ -744,6 +744,9 @@ void HamParty::sendAndReceiveOtherDistances()
                     }
                 }
             }
+
+
+
 
         }
 

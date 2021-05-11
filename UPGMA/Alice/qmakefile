@@ -1,0 +1,15 @@
+all: qrunUPGMA
+
+USERNAME=$(shell whoami)
+
+qrunUPGMA: App.cpp src/qHamParties.cpp src/matrixDist.cpp src/guide_tree.cpp
+	g++ -o qrunUPGMA App.cpp src/qHamParties.cpp src/matrixDist.cpp src/guide_tree.cpp -I/home/$(USERNAME) -I/home/$(USERNAME)/boost_1_71_0 -std=c++11 /home/$(USERNAME)/qlibscapi/libscapi.a -lboost_system -L/home/$(USERNAME)/boost_1_71_0/stage/lib -lssl -lcrypto -lgmp -g -pthread -Wall -Werror
+
+
+
+
+
+
+
+
+

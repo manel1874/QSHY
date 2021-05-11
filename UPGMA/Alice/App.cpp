@@ -68,6 +68,12 @@ int main(int argc, char* argv[])
     upgma_tree.Output(output_upgma);
     output_upgma.close();
 
+    cout << "Clean up auxiliary informatin" << endl;
+
+    // Remove files from results folder, otherwise the next run will get stuck (unkown issue solved)
+    std::string del_script = "rm results/*";
+    std::system(del_script.c_str()); 
+
     cout << "DONE : Result saved to phylogeneticTree folder. \n";
 
     return 0;
