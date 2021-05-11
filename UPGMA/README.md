@@ -22,6 +22,7 @@ The project (and each party) is structured as follows:
 
 	- `guide_tree.hpp`: header file of the second phase of UPGMA;
 	- `HamParties.hpp`: header file of the first (private) phase of UPGMA. 
+	- `qHamParties.hpp`: header file of the first (private) phase of UPGMA using quantum communication protocols (HQOT).
 	- `matrixDist.hpp`: header file to build the matrix distance.
 
 3. `inputFiles`: Input files with the following name structure `Party_ i_ seq_ j.txt` for party number i ≤ 3 and sequence j. Note that the strucutre of the input elements in this file should be as explained in [hammingDistance](../hammingDistance) section.
@@ -41,6 +42,7 @@ The project (and each party) is structured as follows:
 	
 	- `guide_tree.cpp`: source file of the second phase of UPGAM.
 	- `HamParties.cpp`: source file of the first (private) phase of UPGAM.
+	- `qHamParties.hpp`: source file of the first (private) phase of UPGMA using quantum communication protocols (HQOT).
 	- `matrixDist.cpp`: source file to build the matrix distance from the computed hamming distances.
 
 9. `yaoConfigFiles`: before the application is run the folder is empty. After it is run it is created one configFile for each input sequence. These files contain the information of the paths to the boolean circuit and input elements.
@@ -76,6 +78,16 @@ $ ./runUPGMA 0 2
 ```
 It runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
 
+5. `qrunSMCParty.sh`: shell script used inside [`qHamParties.cpp`](src/qHamParties.cpp) file in order to run the Hammind Distance SMC protocol between two parties using the HQOT protocol.
+
+3. `qmakefile`: file used to compile the quantum version of the project.
+
+4. `qrunUPGMA`: execultable created after running `make -f qmakefile` command. The executable needs two inputs: party id and number of inputs. *Example*:
+```
+$ ./qrunUPGMA 0 2
+```
+It runs the application as party id 0 and two inputs. **Note:** here the application will only use the input files `Party_0_ seq_0.txt` and `Party_0_ seq_1.txt` even if the corresponding input's folder has more input files.
+
 5. `webapp.py`: Flask web application.
 
 
@@ -87,6 +99,15 @@ After installing [libscapi](../INSTALLlibscapi.md) and [mpc-benchmark](../INSTAL
 ```
 $ make
 ```
+
+or 
+
+```
+$ make -f qmakefile
+```
+
+in case we want to compile the classical or quantum system, respectively.
+
 
 Now, we can either run the application through the terminal or using `webapp.py` Flask application.
 
@@ -113,7 +134,7 @@ $ ./runUPGMA 1 3
 $ ./runUPGMA 2 1
 ```
 
-In the presented example Alice has id 0, Bob id 1 and Charlie has id 2.
+In the presented example Alice has id 0, Bob id 1 and Charlie has id 2. In case we want to run the quantum solution, we simply have to run './qrunUPGMA' instead of './runUPGMA'.
 
 4. The output result is saved inside phylogeneticTree folder. In order to better visualize the tree you can go to [this website](http://etetoolkit.org/treeview/).
 

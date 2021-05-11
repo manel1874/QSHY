@@ -27,11 +27,18 @@ $ cd ~
 $ git clone https://github.com/manel1874/MPC-Benchmark
 ```
 
-Change to qdev branch:
+If you are istalling "3. MPC-Benchmark": Change to dev branch:
+```
+$ cd MPC-Benchmark
+$ git checkout dev
+```
+
+If you are istalling "4. qMPC-Benchmark": Change to qdev branch:
 ```
 $ cd MPC-Benchmark
 $ git checkout qdev
 ```
+
 
 Install Semi-Honest Yao Protocol:
 ```

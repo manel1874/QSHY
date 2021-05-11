@@ -17,11 +17,15 @@ The main goal of the repository is to offer a framework to develop Secure Multip
 QSHY runs on Linux (x64 only, 32 bit systems are not supported) and has been tested on the following version:
 - Ubuntu 16.04/18.04 LTS
 
+You are currently on dev-cq (classical quantum) branch. In this branch we can build separately a classical and a quantum application.
+
 In order to install this repository you will need to install the building blocks mentioned before. Install in the following order:
 
 1. libscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
-2. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
-3. CBMC-GC: read [INSTALLcbmcgc.md](INSTALLcbmcgc.md)
+2. qlibscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
+3. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
+4. qMPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
+5. CBMC-GC: read [INSTALLcbmcgc.md](INSTALLcbmcgc.md)
 
 ## Usage
 

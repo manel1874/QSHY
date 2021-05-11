@@ -42,7 +42,13 @@ $ cd ~
 $ git clone https://github.com/manel1874/libscapi.git
 $ cd libscapi
 ```
-Install qdev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
+If you are istalling "1. libscapi": install dev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
+```
+$ git checkout dev
+``` 
+
+
+If you are istalling "2. qlibscapi": install qdev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
 ```
 $ git checkout qdev
 ```
