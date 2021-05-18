@@ -8,8 +8,8 @@ matrixDist::matrixDist(shared_ptr<HamParty> meParty)
     vector<int> numOfInputsOtherParties = meParty->numOfInputsOtherParties;
 
     this->n = accumulate(numOfInputsOtherParties.begin(),numOfInputsOtherParties.end(),0);
-
     int N = 2*n - 1;
+    
     // create empty matrix
     std::vector< std::vector<float> > matrixDistance;
     matrixDistance = std::vector< std::vector<float>>(N, std::vector<float>(N, -1.0));

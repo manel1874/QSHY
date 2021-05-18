@@ -60,6 +60,23 @@ int main(int argc, char* argv[])
     vector<vector<float>> matrixDistance = myMatrixDist->mD;
     vector<string> mNodeNames = myMatrixDist->nodeNames;
 
+    fstream mDPhylipFile;
+
+    mDPhylipFile.open("matrix_phylip.txt",fstream::out);
+
+    for (int i=0; i<n;i++) //This variable is for each row below the x 
+    {        
+        mDPhylipFile << mNodeNames[i]<< "\t";
+
+        for (int j=0; j<n;j++)
+        {                      
+            mDPhylipFile << matrixDistance[i][j] << "\t";
+        }
+        mDPhylipFile<<std::endl;
+    }
+    mDPhylipFile.close();
+    
+    
     cout << "PART 3 - COMPUTE SECOND PART OF UPGMA \n" << endl;
     GuideTree upgma_tree(n, matrixDistance, mNodeNames);
     upgma_tree.CreateTree("upgma");
