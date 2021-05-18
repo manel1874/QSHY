@@ -1,4 +1,4 @@
-#define LEN_SEQ 1
+#define LEN_SEQ 2000 // this gives the desired number of input bit elements to deal with 32k ACGT sequences: 32K ACGT = 64k binary and 2000 unsigned int = 2000 x 32 = 64k
 
 typedef struct {
 	unsigned int el[LEN_SEQ];
