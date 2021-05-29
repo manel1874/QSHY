@@ -27,24 +27,27 @@ $ cd ~
 $ git clone https://github.com/manel1874/MPC-Benchmark
 ```
 
-If you are istalling "3. MPC-Benchmark": Change to dev branch:
-```
-$ cd MPC-Benchmark
-$ git checkout dev
-```
-
-If you are istalling "4. qMPC-Benchmark": Change to qdev branch:
+If you are istalling "3. qMPC-Benchmark": Change to qdev branch:
 ```
 $ cd MPC-Benchmark
 $ git checkout qdev
 ```
 
+If you are istalling "4. MPC-Benchmark": Change to dev branch:
+```
+$ cd MPC-Benchmark
+$ git checkout dev
+```
+
 
 Install Semi-Honest Yao Protocol:
 ```
-$ cd $~/MPC-Benchmark/SemiHonestYao
-$ cmake . \&\& make
+$ cd SemiHonestYao
+$ cmake . && make
 ```
+
+If you are installing "3. qMPC-Benchmark": change the name of the folder from `MPC-Benchmark` to `qMPC-Benchmark`.
+
 
 #### Some remarks:
 
