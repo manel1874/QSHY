@@ -42,21 +42,23 @@ $ cd ~
 $ git clone https://github.com/manel1874/libscapi.git
 $ cd libscapi
 ```
-If you are istalling "1. libscapi": install dev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
+If you are installing "1. qlibscapi": install qdev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
 ```
-$ git checkout dev
+$ git checkout qdev
 ``` 
 
 
-If you are istalling "2. qlibscapi": install qdev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
+If you are installing "2. libscapi": install dev version, otherwise MPC-Benchmark does not work and gives the following [issue](https://github.com/cryptobiu/MPC-Benchmark/issues/6).
 ```
-$ git checkout qdev
+$ git checkout dev
 ```
 
 Make sure you have installed cmake version 3.16. In order to do so please [go here](https://cmake.org/files/v3.16/), choose cmake-3.16.0.tar.gz and follow the instructions on the README file. After that, run:
 ```
 $ make
 ```
+
+If you are installing "1. qlibscapi": change the name of the folder from `libscapi` to `qlibscapi`.
 
 #### Some remarks:
 
