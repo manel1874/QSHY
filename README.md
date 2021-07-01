@@ -21,10 +21,10 @@ You are currently on dev-cq (classical quantum) branch. In this branch we can bu
 
 In order to install this repository you will need to install the building blocks mentioned before. Install in the following order:
 
-1. libscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
-2. qlibscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
-3. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
-4. qMPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
+1. qlibscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
+2. libscapi: read [INSTALLlibscapi.md](INSTALLlibscapi.md)
+3. qMPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
+4. MPC-Benchmark: read [INSTALLmpcbenchmark.md](INSTALLmpcbenchmark.md)
 5. CBMC-GC: read [INSTALLcbmcgc.md](INSTALLcbmcgc.md)
 
 ## Usage

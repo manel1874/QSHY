@@ -5,6 +5,6 @@ $ cd CBMC-GC-2
 $ sudo apt-get update
 $ sudo apt-get install bison
 $ sudo apt-get install flex
-$ sudo minisat2-download
+$ make minisat2-download
 $ make
 ```
