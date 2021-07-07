@@ -12,12 +12,56 @@ The main goal of the repository is to offer a framework to develop Secure Multip
 
 ## Installation
 
-**TODO:** The installation process is still a bit tedious and has to be automated.
-
 QSHY runs on Linux (x64 only, 32 bit systems are not supported) and has been tested on the following version:
 - Ubuntu 16.04/18.04 LTS
 
 You are currently on dev-cq (classical quantum) branch. In this branch we can build separately a classical and a quantum application.
+
+### Authomatic
+
+Install requirements:
+```
+$ cd
+$ ./install_requirements.sh
+```
+
+#### Only classical
+Install libscapi
+```
+$ cd
+$ ./instal_libscapi.sh
+```
+
+Install mpc-benchmark
+```
+$ cd
+$ ./instal_mpc-benchmark.sh
+```
+
+#### Only quantum
+
+**Note:** in case you already installed "Only classical", there will be a concflict with the directories name `libscapi` and `MPC-Benchmark`. Solution: change temporarily the name of the `libscapi` and `MPC-Benchmark` during the quanutm installation phase.
+
+Install qlibscapi
+```
+$ cd
+$ ./instal_qlibscapi.sh
+```
+
+Install qmpc-benchmark
+```
+$ cd
+$ ./instal_qmpc-benchmark.sh
+```
+
+#### Both classical and quantum
+
+```
+$ ./install_cq_libscapi_mpcbenchmark.sh
+```
+
+### Manually
+
 
 In order to install this repository you will need to install the building blocks mentioned before. Install in the following order:
 
